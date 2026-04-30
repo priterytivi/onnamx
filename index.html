@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONNA MX - Trung Tâm Truyền Hình ONNA Network</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            height: 70px; /* Tăng chiều cao header */
+        }
+        
+        /* Logo to hơn */
+        .logo-main { 
+            height: 55px; /* Tăng kích thước logo */
+            width: auto;
+            object-fit: contain; 
+        }
+
+        /* Nút Menu chuyển động nhẹ */
+        .menu-btn {
+            background: none;
+            border: none;
+            width: 35px;
+            height: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .menu-btn span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #333;
+            transition: 0.3s ease;
+        }
+        .menu-btn.active span:nth-child(1) { transform: translateX(5px); width: 75%; }
+        .menu-btn.active span:nth-child(2) { transform: translateX(-2px); }
+        .menu-btn.active span:nth-child(3) { transform: translateX(3px); width: 90%; }
+
+        .rainbow-bar {
+            height: 5px;
+            background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+        }
+
+        /* Player */
+        .video-container {
+            width: 100%;
+            background: #000;
+            aspect-ratio: 16 / 9;
+        }
+        iframe { width: 100%; height: 100%; border: none; }
+
+        /* Khu vực chọn kênh */
+        .channel-section {
+            padding: 25px 0;
+            background-color: #fff;
+        }
+        .channel-selector {
+            display: flex;
+            overflow-x: auto;
+            align-items: center; /* Để các nút căn giữa khi phóng to */
+            padding: 10px 20px;
+            gap: 15px;
+            scrollbar-width: none;
+        }
+        .channel-selector::-webkit-scrollbar { display: none; }
+
+        /* Thumbnail xám đen */
+        .channel-item {
+            flex: 0 0 auto;
+            width: 120px;
+            height: 70px;
+            background: #333333;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none; /* Bỏ viền đỏ */
+        }
+
+        /* Hiệu ứng PHÓNG TO khi được chọn */
+        .channel-item.active {
+            transform: scale(1.15); /* Phóng to 15% */
+            background: #1a1a1a;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .channel-item img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        /* Menu Navigation */
+        .nav-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .nav-menu.open { max-height: 400px; border-bottom: 1px solid #eee; }
+        .nav-menu ul { list-style: none; padding: 0; margin: 0; }
+        .nav-menu li a {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border-bottom: 1px solid #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://i.ibb.co/4gpdMmg0/kmc-20260427-014144.png" alt="Logo" class="logo-main" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Tokyo_MX_logo.svg/300px-Tokyo_MX_logo.svg.png'">
+        <button class="menu-btn" id="menuBtn">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <div class="rainbow-bar"></div>
+
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="/index.html">Trang chủ <span>+</span></a></li>
+            <li><a href="https://s.mxtv.jp/category/">Giới thiệu<span>+</span></a></li>
+            <li><a href="https://s.mxtv.jp/tokyomxplus/">Thông tin <span>+</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="video-container">
+        <iframe id="videoPlayer" allowfullscreen allow="autoplay"></iframe>
+    </div>
+
+    <div class="channel-section">
+        <div class="channel-selector" id="channelList">
+            </div>
+    </div>
+
+    <script>
+        // Cấu hình kênh
+        const channels = [
+            { name: "ONNA MX1", logo: "https://i.ibb.co/XfDfPx04/1775851662690.png", url: "http://livesv2.onnanetwork.xyz/hls/oni1/index.m3u8" },
+            { name: "ONNA MX2", logo: "https://i.ibb.co/20xnsxTc/1776180025509.png", url: "http://livesv2.onnanetwork.xyz/hls/oni2/index.m3u8" },
+            { name: "ONNA MX3", logo: "https://i.ibb.co/N6Km701F/1776181393978.png", url: "http://livesv2.onnanetwork.xyz/hls/oni3/index.m3u8" },
+            { name: "ONNA FM", logo: "https://i.ibb.co/d4ryPQBj/1776222904715.png", url: "http://livesv2.onnanetwork.xyz/hls/onnafm/index.m3u8" }
+        ];
+
+        const player = document.getElementById('videoPlayer');
+        const channelList = document.getElementById('channelList');
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        function initChannels() {
+            channels.forEach((ch, index) => {
+                const item = document.createElement('div');
+                item.className = 'channel-item';
+                item.innerHTML = `<img src="${ch.logo}" alt="${ch.name}" onerror="this.src='https://via.placeholder.com/100x50/333/fff?text=${ch.name}'">`;
+                item.onclick = () => changeChannel(ch.url, item);
+                channelList.appendChild(item);
+
+                // Tự động mở kênh đầu tiên
+                if (index === 0) changeChannel(ch.url, item);
+            });
+        }
+
+        function changeChannel(m3u8Url, element) {
+            const embedBase = "https://www.m3u8player.online/embed/m3u8?url=";
+            player.src = embedBase + encodeURIComponent(m3u8Url);
+
+            // Bỏ active cũ và gán active mới để phóng to
+            document.querySelectorAll('.channel-item').forEach(i => i.classList.remove('active'));
+            element.classList.add('active');
+
+            // Tự động cuộn đến kênh được chọn (nếu nó nằm ngoài màn hình)
+            element.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+
+        menuBtn.onclick = () => {
+            menuBtn.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        };
+
+        initChannels();
+        
+    </script>
+</body>
+</html>
+ <div class="rainbow-bar"></div>
+ 
+ <script>
+        
+        document.getElementById('themeToggle').addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode', this.checked);
+        });
+
+        async function loadNews() {
+            const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://vtcnews.vn/rss/thoi-su.rss')}`;
+            try {
+                const res = await fetch(api);
+                const data = await res.json();
+                const grid = document.getElementById('vtcNews');
+                grid.innerHTML = '';
+
+                data.items.slice(0, 10).forEach(item => {
+                    let thumb = '';
+                    const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
+                    if (imgMatch && imgMatch[1]) thumb = imgMatch[1];
+                    
+                    const desc = item.description.replace(/<[^>]*>?/gm, '').substring(0, 80);
+                    grid.innerHTML += `
+                        <a href="${item.link}" target="_blank" class="news-card">
+                            <div class="news-thumb" style="background-image: url('${thumb}')"></div>
+                            <div class="news-info">
+                                <h3>${item.title}</h3>
+                                <p>${desc}...</p>
+                            </div>
+                        </a>`;
+                });
+            } catch (e) {}
+        }
+        loadNews();
+    </script>
+</body>
+</html>
+
