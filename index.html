@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Báo - ONNA MX</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0077cc, #00bfff);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 40px 30px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .logo img {
+            width: 120px;
+            margin-bottom: 15px;
+        }
+
+        /* Tiêu đề chính màu trắng */
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        /* Tiêu đề phụ màu trắng nhẹ */
+        .subtitle {
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .subtitle strong {
+            display: block;
+            margin-top: 4px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                width: 100px;
+            }
+            .title {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://i.ibb.co/yn0Yswng/IMG-20260302-203238.png" alt="ONNA Network">
+        </div>
+
+        <div class="title">
+            Thông báo tới quý vị khán giả của kênh ONNA MX
+        </div>
+
+        <div class="subtitle">
+            Kể từ ngày 6/5/2026, ONNA Network sẽ dừng toàn bộ hoạt động tất cả các mảng liên quan (Bao gồm cả 3 kênh truyền hình thuộc bởi ONNA Network) vì lý do liên quan đến pháp lý. Trân trọng cảm ơn quý khán giả đã quan tâm và ủng hộ và rất mong quý khán giả thông cảm!
+            <strong>nnt1709group@gmail.com</strong>
+        </div>
+    </div>
+</body>
+</html>
