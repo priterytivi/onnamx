@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trang chủ | ONNA MX - Trung tâm Truyền hình ONNA Network</title>
+	<link rel="icon" href="https://unknownprofile297823.github.io/repository543/favicon.png">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Mã CSS chân trang -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<style>
+		.custom-footer {
+			background-color: #000000;
+			color: white;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			padding-top: 3rem;
+			padding-bottom: 1.5rem;
+			margin-top: auto;
+		}
+		.custom-footer .footer-link {
+			color: white;
+			text-decoration: none;
+			transition: 0.3s;
+			display: inline-block;
+		}
+		.custom-footer .footer-link:hover {
+			color: #38bdf8 !important;
+			transform: translateX(5px);
+		}
+		.custom-footer .social-icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 35px;
+			height: 35px;
+			border: 1px solid white;
+			border-radius: 50%;
+			color: white;
+			transition: 0.3s;
+			text-decoration: none;
+		}
+		.custom-footer .social-icon:hover {
+			background-color: #0d6efd;
+			border-color: #0d6efd;
+		}
+		.custom-footer h5 {
+			color: #38bdf8;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 1.5rem;
+		}
+	</style>
+	<!-- <style>
+		.download-app-link {
+			display: flex;
+			align-items: center;
+			background: #1a1a1a;
+			padding: 8px 15px;
+			border-radius: 6px;
+			border: 1px solid #333;
+			transition: 0.3s;
+			text-decoration: none !important;
+			width: fit-content;
+		}
+		.download-app-link:hover {
+			border-color: #38bdf8;
+			background: #222;
+		}
+		.qr-code-img {
+			width: 100px;
+			height: 100px;
+			background: white;
+			padding: 5px;
+			border-radius: 4px;
+		}
+	</style> -->
+	<!-- Mã CSS menu và lớp màu dưới thanh menu (thiết kế cho máy tính và điện thoại) -->
+	<style>
+		#mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+        #mobile-menu.active {
+            max-height: 400px;
+            opacity: 1;
+            padding: 1rem 0;
+        }
+        .hamburger-line {
+            transition: all 0.3s ease-in-out;
+        }
+        .open .line-1 { transform: translateY(7px) rotate(45deg); }
+        .open .line-2 { opacity: 0; }
+        .open .line-3 { transform: translateY(-7px) rotate(-45deg); }
+		
+        .logo-main { 
+            height: 55px;
+            width: auto;
+            object-fit: contain; 
+        }
+        .tight-left-nav {
+            padding-left: 9px !important;
+        }
+        .logo-container-neg {
+            margin-left: -20px;
+        }
+        @media (max-width: 640px) {
+            .logo-container-neg {
+                margin-left: -10px; 
+            }
+        }
+		.rainbow-line {
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #50c878, #0000ff, #8b00ff);
+        }
+	</style>
+	<!-- Mã CSS khung truyền hình và lịch phát sóng (thiết kế cho máy tính và điện thoại) -->
+	<style>
+		.custom-blue-frame {
+            background-color: #020617; 
+            border: 1px solid #1e293b; 
+            border-radius: 0 !important; 
+            box-shadow: none !important; 
+        }
+		.aspect-video {
+            aspect-ratio: 16 / 9;
+        }
+        .channel-item.active div {
+            border-color: #38bdf8;
+            background-color: #0f172a;
+        }
+	</style>
+	<!-- Mã CSS thanh di chuyển (thiết kế cho máy tính và điện thoại) -->
+	<style>
+		.custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
+        }
+		.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+		/* Thanh cuộn ngang chương trình */
+		.custom-scrollbar-h::-webkit-scrollbar {
+			height: 6px;
+		}
+		.custom-scrollbar-h::-webkit-scrollbar-track {
+			background: #e2e8f0;
+			border-radius: 10px;
+		}
+		.custom-scrollbar-h::-webkit-scrollbar-thumb {
+			background: #94a3b8;
+			border-radius: 10px;
+		}
+		.custom-scrollbar-h::-webkit-scrollbar-thumb:hover {
+			background: #38bdf8;
+		}
+	</style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+	<!-- Mã HTML menu và lớp màu dưới thanh menu (thiết kế cho máy tính và điện thoại) -->
+	<nav class="bg-black shadow-lg fixed w-full z-50 border-b border-gray-900">
+		<div class="max-w-7xl mx-auto tight-left-nav pr-4 sm:pr-6 lg:pr-8">
+			<div class="flex justify-between h-16 items-center">
+				<div class="flex-shrink-0 flex items-center logo-container-neg">
+					<a href="https://unknownprofile297823.github.io/repository543" class="block"><img src="https://unknownprofile297823.github.io/repository543/images/logo.png" alt="Logo" class="logo-main"></a>
+				</div>
+				<div class="hidden md:flex space-x-8">
+					<a href="https://unknownprofile297823.github.io/repository543" class="text-gray-300 hover:text-white font-medium transition duration-300">Trang chủ</a>
+					<a href="https://unknownprofile297823.github.io/repository543/show" class="text-gray-300 hover:text-white font-medium transition duration-300">Chương trình</a>
+					<!-- <a href="https://s.mxtv.jp/category/" class="text-gray-300 hover:text-white font-medium transition duration-300">Giới thiệu</a>
+					<a href="https://s.mxtv.jp/tokyomxplus/" class="text-gray-300 hover:text-white font-medium transition duration-300">Thông tin</a>
+					<a href="https://onnamx3.onnanetwork.xyz/" class="text-gray-300 hover:text-white font-medium transition duration-300">ONNA MX3</a> -->
+				</div>
+				<div class="md:hidden flex items-center">
+					<button id="menu-btn" class="outline-none focus:outline-none p-2 hover:bg-gray-800 transition rounded-md">
+						<div class="w-6 h-5 flex flex-col justify-between items-center relative">
+							<span class="hamburger-line line-1 block w-full h-0.5 bg-white"></span>
+							<span class="hamburger-line line-2 block w-full h-0.5 bg-white"></span>
+							<span class="hamburger-line line-3 block w-full h-0.5 bg-white"></span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="rainbow-line"></div>
+		<div id="mobile-menu" class="md:hidden bg-black px-4 border-b border-gray-900">
+			<div class="flex flex-col space-y-2 pb-6 pt-4">
+				<a href="https://unknownprofile297823.github.io/repository543" class="text-gray-300 hover:text-white py-3 border-b border-gray-800">Trang chủ</a>
+				<a href="https://unknownprofile297823.github.io/repository543/show" class="text-gray-300 hover:text-white py-3">Chương trình</a>
+				<!-- <a href="https://s.mxtv.jp/category/" class="text-gray-300 hover:text-white py-3 border-b border-gray-800">Giới thiệu</a>
+				<a href="https://s.mxtv.jp/tokyomxplus/" class="text-gray-300 hover:text-white py-3 border-b border-gray-800">Thông tin</a>
+				<a href="https://onnamx3.onnanetwork.xyz/" class="text-gray-300 hover:text-white py-3">ONNA MX3</a> -->
+			</div>
+		</div>
+	</nav>
+	<script>
+		document.getElementById('menu-btn').addEventListener('click', () => {
+			document.getElementById('menu-btn').classList.toggle('open');
+			document.getElementById('mobile-menu').classList.toggle('active');
+		});
+	</script>
+	<!-- Mã HTML khung truyền hình và lịch phát sóng (thiết kế cho máy tính và điện thoại) -->
+	<div class="pt-16 md:pt-24 pb-12 px-0 md:px-4 max-w-[1400px] mx-auto">
+		<div class="flex flex-col lg:flex-row gap-6 custom-blue-frame p-4 overflow-hidden">
+			<div class="flex-1">
+				<div class="bg-black overflow-hidden aspect-video mb-4 border border-slate-800">
+					<iframe id="video-player" src="" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="relative group">
+					<button id="prev-chan" class="hidden absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 p-2 hover:bg-sky-600 text-white transition opacity-0 group-hover:opacity-100 ml-1">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+					</button>
+					<div id="channel-container" class="flex gap-3 md:gap-4 overflow-x-auto md:justify-center no-scrollbar scroll-smooth px-4 md:px-2 py-2">
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX1 HD" onclick="changeChannel('http://livesv2.onnanetwork.xyz/hls/oni1/index.m3u8', 'ONNA MX1 HD')">
+							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
+								<img src="https://unknownprofile297823.github.io/repository543/images/tvlive/onnamx1.png" alt="ONNA MX1 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
+							</div>
+						</div>
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX2 HD" onclick="changeChannel('https://kubolive.ddns.net:8081/hls_nonkey/oni2/index.m3u8', 'ONNA MX2 HD')">
+							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
+								<img src="https://unknownprofile297823.github.io/repository543/images/tvlive/onnamx2.png" alt="ONNA MX2 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
+							</div>
+						</div>
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX3 HD" onclick="changeChannel('http://livesv2.onnanetwork.xyz/hls/oni3/index.m3u8', 'ONNA MX3 HD')">
+							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
+								<img src="https://unknownprofile297823.github.io/repository543/images/tvlive/onnamx3.png" alt="ONNA MX3 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
+							</div>
+						</div>
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX4 HD" onclick="changeChannel('http://livesv2.onnanetwork.xyz/hls/oni4/index.m3u8', 'ONNA MX4 HD')">
+							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
+								<img src="https://unknownprofile297823.github.io/repository543/images/tvlive/onnamx4.png" alt="ONNA MX4 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
+							</div>
+						</div>
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA FM" onclick="changeChannel('http://livesv2.onnanetwork.xyz/hls/onnafm/index.m3u8', 'ONNA FM')">
+							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
+								<img src="https://unknownprofile297823.github.io/repository543/images/tvlive/onnafm.png" alt="ONNA FM" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
+							</div>
+						</div>
+					</div>
+					<button id="next-chan" class="hidden absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 p-2 hover:bg-sky-600 text-white transition opacity-0 group-hover:opacity-100 mr-1">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+					</button>
+				</div>
+			</div>
+			<!-- Phụ: Khung lịch phát sóng -->
+			<div class="w-full lg:w-[350px] flex flex-col h-full bg-[#0f172a] border border-slate-800 overflow-hidden">
+				<div class="p-4 border-b border-slate-800 flex items-center justify-between bg-black/20">
+					<button id="prev-day" class="p-1 hover:bg-slate-800 text-slate-400 hover:text-sky-400 transition rounded">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+					</button>
+					<div class="flex items-center gap-2 text-sky-400">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+						<span id="epg-date-display" class="font-bold text-sm tracking-tight">--/--/----</span>
+					</div>
+					<button id="next-day" class="p-1 hover:bg-slate-800 text-slate-400 hover:text-sky-400 transition rounded">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+					</button>
+				</div>
+				<div id="epg-list" class="overflow-y-auto custom-scrollbar h-[549px]">
+					<div class="p-8 text-center text-slate-500 italic text-sm">Chọn một kênh để xem lịch phát sóng</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const EPG_URL = '';
+		let currentEpgDate = new Date();
+		let currentChannelId = '';
+		
+		function changeChannel(m3u8Url, channelId) {
+			if(m3u8Url === '#') return;
+			const player = document.getElementById('video-player');
+			player.src = `https://www.m3u8player.online/embed/m3u8?url=${encodeURIComponent(m3u8Url)}`;
+			currentChannelId = channelId;
+			document.querySelectorAll('.channel-item').forEach(item => {
+				item.classList.remove('active');
+				if(item.getAttribute('data-id') === channelId) {
+					item.classList.add('active');
+				}
+			});
+			loadEPG();
+		}
+		
+		const container = document.getElementById('channel-container');
+		document.getElementById('next-chan').onclick = () => container.scrollLeft += 280;
+		document.getElementById('prev-chan').onclick = () => container.scrollLeft -= 280;
+		
+		function updateDateDisplay() {
+			const day = String(currentEpgDate.getDate()).padStart(2, '0');
+			const month = String(currentEpgDate.getMonth() + 1).padStart(2, '0');
+			const year = currentEpgDate.getFullYear();
+			document.getElementById('epg-date-display').innerText = `${day}/${month}/${year}`;
+		}
+		
+		document.getElementById('prev-day').onclick = () => {
+			currentEpgDate.setDate(currentEpgDate.getDate() - 1);
+			updateDateDisplay();
+			if(currentChannelId) loadEPG();
+		};
+		
+		document.getElementById('next-day').onclick = () => {
+			currentEpgDate.setDate(currentEpgDate.getDate() + 1);
+			updateDateDisplay();
+			if(currentChannelId) loadEPG();
+		};
+		
+		async function loadEPG() {
+			if (!currentChannelId) return;
+			const epgList = document.getElementById('epg-list');
+			epgList.innerHTML = '<div class="p-4 border-b border-slate-800 animate-pulse"><div class="h-4 bg-slate-800 w-1/4 mb-2"></div><div class="h-4 bg-slate-800 w-3/4"></div></div>'.repeat(3);
+			
+			try {
+				const response = await fetch(EPG_URL);
+				const text = await response.text();
+				const parser = new DOMParser();
+				const xmlDoc = parser.parseFromString(text, "text/xml");
+				const programs = xmlDoc.getElementsByTagName('programme');
+				let html = '';
+				const targetDateStr = currentEpgDate.getFullYear() + 
+                                    String(currentEpgDate.getMonth() + 1).padStart(2, '0') + 
+                                    String(currentEpgDate.getDate()).padStart(2, '0');
+				let found = false;
+				for (let i = 0; i < programs.length; i++) {
+					const start = programs[i].getAttribute('start');
+					const channelInXml = programs[i].getAttribute('channel');
+					if (channelInXml === currentChannelId && start.startsWith(targetDateStr)) {
+						const title = programs[i].getElementsByTagName('title')[0].textContent;
+						const timeStr = start.substring(8, 10) + ":" + start.substring(10, 12);
+						html += `
+							<div class="p-4 border-b border-slate-800/50 hover:bg-slate-800/40 transition cursor-pointer">
+								<div class="flex items-center justify-between">
+									<span class="text-sky-400 font-mono text-sm font-bold">${timeStr}</span>
+                                    <span class="text-[10px] text-slate-500 font-semibold"><!-- ${currentChannelId} --></span>
+								</div>
+								<h4 class="text-sm font-medium text-slate-200 mt-1 uppercase tracking-tight leading-snug">${title}</h4>
+							</div>
+						`;
+						found = true;
+					}
+				}
+				epgList.innerHTML = found ? html : `<div class="p-8 text-slate-500 text-center text-sm italic">Không có dữ liệu lịch phát sóng cho kênh ${currentChannelId} vào ngày này.</div>`;
+			} catch (error) {
+				console.error('Lỗi EPG:', error);
+				epgList.innerHTML = '<p class="p-4 text-red-400 text-sm">Lỗi kết nối dữ liệu lịch phát sóng.</p>';
+			}
+		}
+		window.onload = () => {
+			updateDateDisplay();
+			const firstChannel = document.querySelector('.channel-item');
+			if (firstChannel) {
+				const url = "http://livesv2.onnanetwork.xyz/hls/oni1/index.m3u8";
+				const id = firstChannel.getAttribute('data-id');
+				changeChannel(url, id);
+			}
+		};
+	</script>
+	<!-- Mã HTML các chương trình phát sóng (thiết kế cho máy tính và điện thoại) -->
+	<div class="mt-0 px-4">
+		<a href="https://unknownprofile297823.github.io/repository543/show"><h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-6 flex items-center"><span class="w-1 h-8 bg-sky-500 mr-3"></span>CÁC CHƯƠNG TRÌNH PHÁT SÓNG</h2></a>
+		<div class="flex gap-4 overflow-x-auto pb-6 custom-scrollbar-h snap-x">
+			<a href="https://unknownprofile297823.github.io/repository543/show/chiec-non-ky-dieu-cg"><div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="https://unknownprofile297823.github.io/repository543/show/thumbnail/onnamx1/thumbnail_chiec-non-ky-dieu-cg.png" alt="CHIẾC NÓN KỲ DIỆU CG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div></a>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+		</div>
+	</div>
+	<div class="mt-6 px-4">
+		<h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-6 flex items-center"><span class="w-1 h-8 bg-sky-500 mr-3"></span>ANIME VÀ PHIM HOẠT HÌNH</h2>
+		<div class="flex gap-4 overflow-x-auto pb-6 custom-scrollbar-h snap-x">
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+			<div class="min-w-[200px] md:min-w-[280px] snap-start group cursor-pointer">
+				<div class="aspect-video bg-gray-200 rounded-none overflow-hidden border border-gray-300 group-hover:border-sky-500 transition-all shadow-md">
+					<img src="" alt="CHƯƠNG TRÌNH 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+				</div>
+				<p class="mt-2 text-sm font-semibold text-gray-700 truncate"></p>
+			</div>
+		</div>
+	</div>
+	<!-- Mã HTML chân trang -->
+	<br>
+	<footer class="custom-footer">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div class="mt-3">
+					<h5 class="text-sky-400 font-bold uppercase mb-4">TRUNG TÂM TRUYỀN HÌNH ONNA Network</h5>
+					<p class="text-sm text-gray-400">Mô tả tại đây.</p>
+                </div>
+				<div class="mt-3">
+					<h5>LIÊN KẾT NHANH</h5>
+					<ul class="space-y-2 list-none p-0">
+						<li><a href="https://s.mxtv.jp/category/" class="footer-link">Giới thiệu</a></li>
+						<li><a href="https://s.mxtv.jp/tokyomxplus/" class="footer-link">Thông tin</a></li>
+						<li><a href="https://onnamx3.onnanetwork.xyz/" class="footer-link">ONNA MX3</a></li>
+					</ul>
+				</div>
+				<div class="mt-3">
+					<h5>MẠNG XÃ HỘI</h5>
+					<div class="flex gap-2 justify-start">
+						<a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+						<a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+					</div>
+				</div>
+				<div class="mt-3">
+					<h5>LIÊN HỆ TẠI</h5>
+					<p class="text-sm text-gray-300 flex items-center">
+                        <i class="bi bi-envelope-at-fill mr-2"></i> contact@example.com
+                    </p>
+				</div>
+			</div>
+			<hr class="my-8 border-gray-700">
+			<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+				<p>© 2026 - Trung tâm Truyền hình ONNA Network.</p>
+				<p class="mt-2 md:mt-0">https://onnanetwork.xyz – Trang chính thức của Trung tâm Truyền hình ONNA Network.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
