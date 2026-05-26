@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chiếc Nón Kỳ Diệu CG - ONNA MX</title>
+	<link rel="icon" href="https://unknownprofile297823.github.io/repository543/favicon.png">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Mã CSS chân trang -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<style>
+		.custom-footer {
+			background-color: #000000;
+			color: white;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			padding-top: 3rem;
+			padding-bottom: 1.5rem;
+			margin-top: auto;
+		}
+		.custom-footer .footer-link {
+			color: white;
+			text-decoration: none;
+			transition: 0.3s;
+			display: inline-block;
+		}
+		.custom-footer .footer-link:hover {
+			color: #38bdf8 !important;
+			transform: translateX(5px);
+		}
+		.custom-footer .social-icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 35px;
+			height: 35px;
+			border: 1px solid white;
+			border-radius: 50%;
+			color: white;
+			transition: 0.3s;
+			text-decoration: none;
+		}
+		.custom-footer .social-icon:hover {
+			background-color: #0d6efd;
+			border-color: #0d6efd;
+		}
+		.custom-footer h5 {
+			color: #38bdf8;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 1.5rem;
+		}
+	</style>
+	<!-- Mã CSS menu và lớp màu dưới thanh menu (thiết kế cho máy tính và điện thoại) -->
+	<style>
+		#mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+        #mobile-menu.active {
+            max-height: 400px;
+            opacity: 1;
+            padding: 1rem 0;
+        }
+        .hamburger-line {
+            transition: all 0.3s ease-in-out;
+        }
+        .open .line-1 { transform: translateY(7px) rotate(45deg); }
+        .open .line-2 { opacity: 0; }
+        .open .line-3 { transform: translateY(-7px) rotate(-45deg); }
+		
+        .logo-main { 
+            height: 55px;
+            width: auto;
+            object-fit: contain; 
+        }
+        .tight-left-nav {
+            padding-left: 9px !important;
+        }
+        .logo-container-neg {
+            margin-left: -20px;
+        }
+        @media (max-width: 640px) {
+            .logo-container-neg {
+                margin-left: -10px; 
+            }
+        }
+		.rainbow-line {
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #50c878, #0000ff, #8b00ff);
+        }
+	</style>
+	<!-- Mã CSS thanh di chuyển (thiết kế cho máy tính và điện thoại) -->
+	<style>
+		.custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
+        }
+		.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+		/* Thanh cuộn ngang chương trình */
+		.custom-scrollbar-h::-webkit-scrollbar {
+			height: 6px;
+		}
+		.custom-scrollbar-h::-webkit-scrollbar-track {
+			background: #e2e8f0;
+			border-radius: 10px;
+		}
+		.custom-scrollbar-h::-webkit-scrollbar-thumb {
+			background: #94a3b8;
+			border-radius: 10px;
+		}
+		.custom-scrollbar-h::-webkit-scrollbar-thumb:hover {
+			background: #38bdf8;
+		}
+	</style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans min-h-screen flex flex-col">
+	<!-- Mã HTML menu và lớp màu dưới thanh menu (thiết kế cho máy tính và điện thoại) -->
+	<nav class="bg-black shadow-lg fixed w-full z-50 border-b border-gray-900">
+		<div class="max-w-7xl mx-auto tight-left-nav pr-4 sm:pr-6 lg:pr-8">
+			<div class="flex justify-between h-16 items-center">
+				<div class="flex-shrink-0 flex items-center logo-container-neg">
+					<a href="https://unknownprofile297823.github.io/repository543" class="block"><img src="https://unknownprofile297823.github.io/repository543/images/logo.png" alt="Logo" class="logo-main"></a>
+				</div>
+				<div class="hidden md:flex space-x-8">
+					<a href="https://unknownprofile297823.github.io/repository543" class="text-gray-300 hover:text-white font-medium transition duration-300">Trang chủ</a>
+					<a href="https://unknownprofile297823.github.io/repository543/show" class="text-gray-300 hover:text-white font-medium transition duration-300">Chương trình</a>
+					<!-- <a href="https://s.mxtv.jp/category/" class="text-gray-300 hover:text-white font-medium transition duration-300">Giới thiệu</a>
+					<a href="https://s.mxtv.jp/tokyomxplus/" class="text-gray-300 hover:text-white font-medium transition duration-300">Thông tin</a>
+					<a href="https://onnamx3.onnanetwork.xyz/" class="text-gray-300 hover:text-white font-medium transition duration-300">ONNA MX3</a> -->
+				</div>
+				<div class="md:hidden flex items-center">
+					<button id="menu-btn" class="outline-none focus:outline-none p-2 hover:bg-gray-800 transition rounded-md">
+						<div class="w-6 h-5 flex flex-col justify-between items-center relative">
+							<span class="hamburger-line line-1 block w-full h-0.5 bg-white"></span>
+							<span class="hamburger-line line-2 block w-full h-0.5 bg-white"></span>
+							<span class="hamburger-line line-3 block w-full h-0.5 bg-white"></span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="rainbow-line"></div>
+		<div id="mobile-menu" class="md:hidden bg-black px-4 border-b border-gray-900">
+			<div class="flex flex-col space-y-2 pb-6 pt-4">
+				<a href="https://unknownprofile297823.github.io/repository543" class="text-gray-300 hover:text-white py-3 border-b border-gray-800">Trang chủ</a>
+				<a href="https://unknownprofile297823.github.io/repository543/show" class="text-gray-300 hover:text-white py-3">Chương trình</a>
+				<!-- <a href="https://s.mxtv.jp/category/" class="text-gray-300 hover:text-white py-3 border-b border-gray-800">Giới thiệu</a>
+				<a href="https://s.mxtv.jp/tokyomxplus/" class="text-gray-300 hover:text-white py-3 border-b border-gray-800">Thông tin</a>
+				<a href="https://onnamx3.onnanetwork.xyz/" class="text-gray-300 hover:text-white py-3">ONNA MX3</a> -->
+			</div>
+		</div>
+	</nav>
+	<script>
+		document.getElementById('menu-btn').addEventListener('click', () => {
+			document.getElementById('menu-btn').classList.toggle('open');
+			document.getElementById('mobile-menu').classList.toggle('active');
+		});
+	</script>
+	<!-- Mã HTML nội dung chương trình -->
+	<div class="relative w-full pt-16 bg-black">
+		<div class="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] w-full overflow-hidden">
+			<img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1920&auto=format" alt="Banner" class="w-full h-full object-cover object-center">
+			<div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/40 to-transparent"></div>
+			<div class="absolute bottom-0 left-0 w-full p-4 sm:p-6 md:p-8 lg:p-12">
+				<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-end gap-4 md:gap-6 text-center md:text-left">
+					<div class="flex-shrink-0 bg-black/60 p-2 rounded-lg backdrop-blur-sm border border-gray-700 shadow-2xl">
+						<img src="https://unknownprofile297823.github.io/repository543/show/chiec-non-ky-dieu-cg/logo-chiec-non-ky-dieu-cg.png" alt="Logo" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain rounded">
+					</div>
+					<div class="flex-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+						<span class="text-xs sm:text-sm font-semibold tracking-widest text-sky-400 uppercase bg-sky-950/80 px-2 py-1 rounded border border-sky-800/50 inline-block mb-2">GAMESHOW</span>
+						<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-none">CHIẾC NÓN KỲ DIỆU CG</h1>
+						<p class="text-gray-300 text-sm md:text-base mt-2 max-w-2xl line-clamp-2 hidden sm:block">Mô tả ngắn gọn hoặc slogan.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+		<div class="bg-gray-800/50 border border-gray-800 p-6 rounded-xl text-center text-gray-400"><!-- Nội dung trang web hoặc danh sách phim sẽ hiển thị tại đây... --></div>
+	</main>
+	<!-- Mã HTML chân trang -->
+	<footer class="custom-footer">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div class="mt-3">
+					<h5 class="text-sky-400 font-bold uppercase mb-4">TRUNG TÂM TRUYỀN HÌNH ONNA Network</h5>
+					<p class="text-sm text-gray-400">Mô tả tại đây.</p>
+                </div>
+				<div class="mt-3">
+					<h5>LIÊN KẾT NHANH</h5>
+					<ul class="space-y-2 list-none p-0">
+						<li><a href="https://s.mxtv.jp/category/" class="footer-link">Giới thiệu</a></li>
+						<li><a href="https://s.mxtv.jp/tokyomxplus/" class="footer-link">Thông tin</a></li>
+						<li><a href="https://onnamx3.onnanetwork.xyz/" class="footer-link">ONNA MX3</a></li>
+					</ul>
+				</div>
+				<div class="mt-3">
+					<h5>MẠNG XÃ HỘI</h5>
+					<div class="flex gap-2 justify-start">
+						<a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+						<a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+					</div>
+				</div>
+				<div class="mt-3">
+					<h5>LIÊN HỆ TẠI</h5>
+					<p class="text-sm text-gray-300 flex items-center">
+                        <i class="bi bi-envelope-at-fill mr-2"></i> contact@example.com
+                    </p>
+				</div>
+			</div>
+			<hr class="my-8 border-gray-700">
+			<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+				<p>© 2026 - Trung tâm Truyền hình ONNA Network.</p>
+				<p class="mt-2 md:mt-0">https://onnanetwork.xyz – Trang chính thức của Trung tâm Truyền hình ONNA Network.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
