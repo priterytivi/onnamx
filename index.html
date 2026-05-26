@@ -223,27 +223,27 @@
 						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
 					</button>
 					<div id="channel-container" class="flex gap-3 md:gap-4 overflow-x-auto md:justify-center no-scrollbar scroll-smooth px-4 md:px-2 py-2">
-						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX1 HD" onclick="changeChannel('https://kubolive.ddns.net:8081/hls_nonkey/oni1/index.m3u8', 'ONNA MX1 HD')">
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX1" onclick="changeChannel('http://live.onnamx.io.vn/hls/oni1/index.m3u8', 'ONNA MX1')">
 							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
 								<img src="https://i.ibb.co/XfDfPx04/1775851662690.png" alt="ONNA MX1 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
 							</div>
 						</div>
-						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX2 HD" onclick="changeChannel('https://kubolive.ddns.net:8081/hls_nonkey/oni2/index.m3u8', 'ONNA MX2 HD')">
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX2" onclick="changeChannel('http://live.onnamx.io.vn/hls/oni2/index.m3u8', 'ONNA MX2')">
 							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
 								<img src="https://i.ibb.co/20xnsxTc/1776180025509.png" alt="ONNA MX2 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
 							</div>
 						</div>
-						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX3 HD" onclick="changeChannel('http://livesv2.onnanetwork.xyz/hls/oni3/index.m3u8', 'ONNA MX3 HD')">
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX3" onclick="changeChannel('http://live.onnamx.io.vn/hls/oni3/index.m3u8', 'ONNA MX3')">
 							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
 								<img src="https://i.ibb.co/N6Km701F/1776181393978.png" alt="ONNA MX3 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
 							</div>
 						</div>
-						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA MX4 HD" onclick="changeChannel('http://livesv2.onnanetwork.xyz/hls/oni4/index.m3u8', 'ONNA MX4 HD')">
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="VTV1" onclick="changeChannel('http://live.onnamx.io.vn/hls/vtv1/index.m3u8', 'VTV1')">
 							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
 								<img src="https://unknownprofile297823.github.io/repository543/images/tvlive/onnamx4.png" alt="ONNA MX4 HD" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
 							</div>
 						</div>
-						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="ONNA FM" onclick="changeChannel('http://livesv2.onnanetwork.xyz/hls/onnafm/index.m3u8', 'ONNA FM')">
+						<div class="channel-item min-w-[100px] md:min-w-[140px] cursor-pointer group/item" data-id="VTV3" onclick="changeChannel('http://live.onnamx.io.vn/hls/vtv3/index.m3u8', 'VTV3')">
 							<div class="aspect-video bg-gray-900 overflow-hidden border-2 border-transparent group-hover/item:border-sky-500 transition">
 								<img src="https://unknownprofile297823.github.io/repository543/images/tvlive/onnafm.png" alt="ONNA FM" class="w-full h-full object-cover opacity-80 group-hover/item:opacity-100">
 							</div>
@@ -360,7 +360,7 @@
 			updateDateDisplay();
 			const firstChannel = document.querySelector('.channel-item');
 			if (firstChannel) {
-				const url = "https://kubolive.ddns.net:8081/hls_nonkey/oni1/index.m3u8";
+				const url = "http://live.onnamx.io.vn/hls/oni1/index.m3u8";
 				const id = firstChannel.getAttribute('data-id');
 				changeChannel(url, id);
 			}
@@ -444,7 +444,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 				<div class="mt-3">
 					<h5 class="text-sky-400 font-bold uppercase mb-4">TRUNG TÂM TRUYỀN HÌNH ONNA Network</h5>
-					<p class="text-sm text-gray-400">ONNA MX là một kênh truyền hình thuộc bởi ONNA Network đã chính thức đi vào hoạt động từ ngày 15/7/2024, dù tên gọi là "Truyền hình" nhưng thực chất đây là kênh Livestream mà mình lập ra với mục đích mua vui cho bản thân mình và phục vụ cho cả cộng đồng, nên nếu Bộ Văn Hoá, Thể Thao & Du Lịch hay các anh công an nếu có ghé qua em mong các anh đừng xử em như mấy trang lậu khác ạ, vì bản thân em lập ra nó với mục đích phi thương mại nên nếu em có sử dụng nội dung nào mà có vi phạm bản quyền thì các anh cứ báo qua email mà em có gắn trên web để bên em tự chủ động gỡ ạ, vì bản thân em cũng không muốn gây thiệt hại cho các đơn vị có bản quyền nên web của em cũng không thu phí hay gắn bất cứ quảng cáo nào cả, nên mong các anh đừng nghĩ em lập ra nó với mục đích thu lợi bất chính gây khổ cho em và cả gia đình em ạ :((( </p>
+					<p class="text-sm text-gray-400">ONNA MX là một kênh truyền hình thuộc bởi ONNA Network đã chính thức đi vào hoạt động từ ngày 15/7/2024, dù tên gọi là "Truyền hình" nhưng thực chất đây là kênh Livestream mà mình lập ra với mục đích mua vui cho bản thân mình và phục vụ cho cả cộng đồng, nên nếu Bộ Văn Hoá, Thể Thao & Du Lịch hay các anh công an nếu có ghé qua em mong các anh đừng xử em như mấy trang lậu khác ạ, vì bản thân em lập ra nó với mục đích phi thương mại nên nếu em có sử dụng nội dung nào mà có vi phạm bản quyền thì các anh cứ báo qua email mà em có gắn trên web để bên em tự chủ động gỡ ạ, vì bản thân em cũng không muốn gây thiệt hại cho các đơn vị có bản quyền nên web của em cũng không thu phí hay gắn bất cứ quảng cáo nào cả, nên mong các anh đừng nghĩ em lập ra nó với mục đích thu lợi bất chính ạ :((( </p>
                 </div>
 				<div class="mt-3">
 					<h5>LIÊN KẾT NHANH</h5>
