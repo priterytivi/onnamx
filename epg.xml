@@ -5,4 +5,6 @@
 	<channel id="ONNA MX4"><display-name></display-name></channel>
 	<programme start="20260530203000 +0700" stop="20260530220000 +0700" channel="ONNA MX1"><title>Truyền Hình Trực Tiếp: Câu Chuyện Tối Thứ 7</title></programme>
 	<programme start="20260530220000 +0700" stop="20260531015923 +0700" channel="ONNA MX1"><title>Truyền Hình Trực Tiếp: Bàn Luận Thể Thao</title></programme>
+	<programme start="20260530203000 +0700" stop="20260530220000 +0700" channel="ONNA MX2"><title>Truyền Hình Trực Tiếp: Câu Chuyện Tối Thứ 7</title></programme>
+	<programme start="20260530220000 +0700" stop="20260531015923 +0700" channel="ONNA MX2"><title>Truyền Hình Trực Tiếp: Bàn Luận Thể Thao</title></programme>
 </tv>
