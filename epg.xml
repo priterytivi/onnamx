@@ -7,11 +7,55 @@
 	<programme start="20260530220000 +0700" stop="20260531015923 +0700" channel="ONNA MX1"><title>Truyền Hình Trực Tiếp: Bàn Luận Thể Thao</title></programme>
 	<programme start="20260530203000 +0700" stop="20260530220000 +0700" channel="ONNA MX2"><title>Truyền Hình Trực Tiếp: Câu Chuyện Tối Thứ 7</title></programme>
 	<programme start="20260530220000 +0700" stop="20260531015923 +0700" channel="ONNA MX2"><title>Truyền Hình Trực Tiếp: Bàn Luận Thể Thao</title></programme>
-	<programme start="20260601170000 +0700" stop="20260601172500 +0700" channel="ONNA MX1"><title>Phim Anime: Mai Mối Cho Độc Sư - Tập 01 (Phụ đề)</title></programme>
-    <programme start="20260601172500 +0700" stop="20260601175100 +0700" channel="ONNA MX1"><title>Phim Anime: Frieren, Pháp sư tiễn táng - Tập 01 (Lồng tiếng)</title></programme>
-	<programme start="20260601175100 +0700" stop="20260601180000 +0700" channel="ONNA MX1"><title>Ca Nhạc</title></programme>
-	<programme start="20260601180000 +0700" stop="20260601184000 +0700" channel="ONNA MX1"><title>Truyền Hình Trực Tiếp: Chương Trình Quay Thưởng Xổ Số Miền Bắc</title></programme>
-	<programme start="20260601184000 +0700" stop="20260601190500 +0700" channel="ONNA MX1"><title>Phim Anime: Mai Mối Cho Độc Sư - Tập 02 (Phụ Đề)</title></programme>
-	
-
+<programme start="20260601170000 +0700" stop="20260601172500 +0700" channel="ONNA MX1">
+<title>PHIM ANIME: MAI MỐI CHO ĐỘC SƯ - TẬP 01 (PHỤ ĐỀ)</title>
+</programme>
+<programme start="20260601172500 +0700" stop="20260601175100 +0700" channel="ONNA MX1">
+<title>PHIM ANIME: FRIEREN, PHÁP SƯ TIỄN TÁNG - TẬP 01 (LỒNG TIẾNG)</title>
+</programme>
+<programme start="20260601175100 +0700" stop="20260601180000 +0700" channel="ONNA MX1">
+<title>CHƯƠNG TRÌNH CA NHẠC</title>
+</programme>
+<programme start="20260601180000 +0700" stop="20260601184000 +0700" channel="ONNA MX1">
+<title>TRUYỀN HÌNH TRỰC TIẾP: CHƯƠNG TRÌNH QUAY THƯỞNG XỔ SỐ MIỀN BẮC</title>
+</programme>
+<programme start="20260601184000 +0700" stop="20260601190500 +0700" channel="ONNA MX1">
+<title>PHIM ANIME: MAI MỐI CHO ĐỘC SƯ - TẬP 02 (PHỤ ĐỀ)</title>
+</programme>
+<programme start="20260601190500 +0700" stop="20260601193000 +0700" channel="ONNA MX1">
+<title>PHIME ANIME: ONIMAI: TÔI GIỜ LÀ EM GÁI CỦA BẠN - TẬP 01 (PHỤ ĐỀ)</title>
+</programme>
+<programme start="20260601193000 +0700" stop="20260601195600 +0700" channel="ONNA MX1">
+<title>PHIME ANIME: FRIEREN, PHÁP SƯ TIỄN TÁNG - TẬP 02 (LỒNG TIẾNG)</title>
+</programme>
+<programme start="20260601195600 +0700" stop="20260601204200 +0700" channel="ONNA MX1">
+<title>CHƯƠNG TRÌNH GIẢI TRÍ: AI TRÚNG SỐ ĐỘC ĐẮC? - TẬP 01</title>
+</programme>
+<programme start="20260601204200 +0700" stop="20260601214200 +0700" channel="ONNA MX1">
+<title>CHƯƠNG TRÌNH GIẢI TRÍ: SONG TÀI THÁCH ĐẤU 2 - TẬP 01</title>
+</programme>
+<programme start="20260601214200 +0700" stop="20260601221500 +0700" channel="ONNA MX1">
+<title>PHIM ANIME: ONIMAI: TÔI GIỜ LÀ EM GÁI CỦA BẠN - TẬP 02 (PHỤ ĐỀ)</title>
+</programme>
+<programme start="20260601221500 +0700" stop="20260601230000 +0700" channel="ONNA MX1">
+<title>PHIM ANIME: MAI MỐI CHO ĐỘC SƯ - TẬP 03 (PHỤ ĐỀ)</title>
+</programme>
+<programme start="20260601170000 +0700" stop="20260601173500 +0700" channel="ONNA MX2">
+<title>CHƯƠNG TRÌNH GIẢI TRÍ: BẠN DÁM ĂN TÔI DÁM NẤU - TẬP 01</title>
+</programme>
+<programme start="20260601173500 +0700" stop="20260601174700 +0700" channel="ONNA MX2">
+<title>PHIM SITCOM: NHỮNG CÔ NÀNG RẮC RỐI - TẬP 01</title>
+</programme>
+<programme start="20260601174700 +0700" stop="20260601190000 +0700" channel="ONNA MX2">
+<title>PHIM SITCOM: NHỮNG CÔ NÀNG RẮC RỐI - TẬP 02</title>
+</programme>
+<programme start="20260601190000 +0700" stop="20260601200000 +0700" channel="ONNA MX2">
+<title>TIẾP SÓNG THỜI SỰ ĐÀI TRUYỀN HÌNH VIỆT NAM</title>
+</programme>
+<programme start="20260601200000 +0700" stop="20260601205600 +0700" channel="ONNA MX2">
+<title>CHƯƠNG TRÌNH GIẢI TRÍ: AI TRÚNG SỐ ĐỘC ĐẮC - TẬP 01</title>
+</programme>
+<programme start="20260601205600 +0700" stop="20260601220000 +0700" channel="ONNA MX2">
+<title>CHƯƠNG TRÌNH GIẢI TRÍ: A.I LÀ AI? - TẬP 01</title>
+</programme>
 </tv>
