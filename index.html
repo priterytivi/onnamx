@@ -272,7 +272,7 @@
 		function changeChannel(m3u8Url, channelId) {
 			if(m3u8Url === '#') return;
 			const player = document.getElementById('video-player');
-			player.src = `https://nekokokooo.github.io/jw/?url=${encodeURIComponent(m3u8Url)}`;
+			player.src = `https://m3u8player.online/embed/m3u8?url=${encodeURIComponent(m3u8Url)}`;
 			currentChannelId = channelId;
 			document.querySelectorAll('.channel-item').forEach(item => {
 				item.classList.remove('active');
