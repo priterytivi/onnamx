@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONNA MX - Thông Báo</title>
+    <style>
+        /* Reset CSS cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Thanh điều hướng (Header) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid #222;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 40px; 
+            display: block;
+        }
+
+        /* Nút chuyển hướng (Màu xanh, bo góc) */
+        .nav-link {
+            background-color: #0076ff;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            text-align: center;
+        }
+
+        .nav-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Phần nội dung chính */
+        main {
+            flex: 1;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Nhãn THÔNG BÁO */
+        .badge {
+            display: inline-block;
+            border: 1px solid #ffffff;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        /* Tiêu đề lớn */
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        /* Đoạn văn mô tả */
+        .description {
+            color: #aaaaaa;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .description strong {
+            color: #ffffff;
+        }
+
+        /* Nút Chi Tiết (Màu xanh) */
+        .btn-detail {
+            display: inline-block;
+            background-color: #0076ff;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-detail:hover {
+            background-color: #0056b3;
+        }
+
+        /* Khối chứa ảnh minh họa phía dưới */
+        .banner-container {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh điều hướng -->
+    <header>
+        <div class="logo">
+            <!-- 1. Bạn thay đổi file logo.png tại đây -->
+            <img src="logo.png" alt="K+ Logo">
+        </div>
+        
+        <!-- 2. NÚT CHUYỂN HƯỚNG TRANG CHỦ (Đã đổi màu xanh và mở tab mới) -->
+        <!-- Thay link 'https://google.com' bằng trang bạn muốn -->
+        <a href="https://google.com" class="nav-link" target="_blank">Chuyển hướng đến trang chủ</a>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main>
+        <div class="badge">THÔNG BÁO</div>
+        
+        <h1>ONNA MX sẽ chính thức ngừng phát sóng tại Việt Nam</h1>
+        
+        <p class="description">
+            ONNA Network xin trân trọng thông báo, kể từ ngày 
+            <strong>01/07/2026</strong>, ONNA Network sẽ chính thức dừng đóng cửa và dừng mọi hoạt động (Bao gồm cả kênh truyền hình dưới tên gọi ONNA MX) tại Việt Nam.
+        </p>
+
+        <!-- 3. NÚT CHI TIẾT (Đã đổi màu xanh và mở tab mới) -->
+        <!-- Thay link 'https://google.com' bằng trang bạn muốn -->
+        <a href="https://google.com" class="btn-detail" target="_blank">Chi Tiết</a>
+
+        <!-- 4. ẢNH PNG PHÍA DƯỚI NÚT -->
+        <div class="banner-container">
+            <!-- Thay file 'anh-cua-ban.png' bằng tên file ảnh của bạn -->
+            <img class="banner-img" src="anh-cua-ban.png" alt="Hình ảnh minh họa thông báo">
+        </div>
+    </main>
+
+</body>
+</html>
+
