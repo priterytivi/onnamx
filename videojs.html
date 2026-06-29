@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>VideoJS</title>
+
+<link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet">
+
+<style>
+html,body{
+    margin:0;
+    width:100%;
+    height:100%;
+    background:#050505;
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+.player-wrap{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        radial-gradient(circle at top,#1b1b1b,#050505 70%);
+}
+
+.video-js{
+    width:100%;
+    height:100%;
+}
+
+.vjs-control-bar{
+    backdrop-filter:blur(20px);
+    background:rgba(15,15,15,.65)!important;
+}
+
+.vjs-big-play-button{
+    border:none!important;
+    border-radius:100px!important;
+    width:90px!important;
+    height:90px!important;
+    line-height:90px!important;
+    background:rgba(255,255,255,.15)!important;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+}
+
+.vjs-big-play-button:hover{
+    transform:scale(1.08);
+}
+
+.loading{
+    position:absolute;
+    color:white;
+    font-size:18px;
+    letter-spacing:1px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="player-wrap">
+
+<video
+id="player"
+class="video-js vjs-big-play-centered"
+controls
+preload="auto"
+playsinline
+></video>
+
+</div>
+
+<script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+
+<script>
+
+const url=new URLSearchParams(location.search).get("url");
+
+if(!url){
+    document.body.innerHTML="<h2 style='color:white;text-align:center;margin-top:40vh'>Không có URL stream</h2>";
+}else{
+
+const player=videojs("player",{
+
+autoplay:true,
+responsive:true,
+fluid:true,
+liveui:true,
+
+sources:[
+{
+src:url,
+type:"application/x-mpegURL"
+}
+]
+
+});
+
+player.ready(function(){
+
+player.play().catch(()=>{});
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
